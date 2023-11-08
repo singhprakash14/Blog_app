@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <a href="/blog">Blog</a>
+        <a href="/blog/create">Add Blog</a>
+        <a href="/user/signup">Sign Up</a>
+        <a href="/user/login">Login</a>
+    </nav>
+    <form action="/user/signup" method="post" id="form">
+        <label for="username">Username:</label>
+        <input type="text" placeholder="Enter user name" name="username" id="username">
+
+        <label for="password">Email:</label>
+        <input type="email" placeholder="Enter user email" name="email" id="email">
+
+        <label for="email">Password:</label>
+        <input type="text" placeholder="Enter Password" name="password" id="password">
+
+        <label for="role">Role:</label>
+        <select name="role" id="role">
+            <option value="user">User</option>
+            <option value="admin">Admin</option>
+        </select>
+        <input type="submit" value="Signup Page">
+    </form>
+</body>
+</html>

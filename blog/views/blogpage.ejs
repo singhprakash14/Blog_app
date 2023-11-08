@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <nav>
+      <a href="/blog">Blog</a>
+      <a href="/blog/create">Add Blog</a>
+      <a href="/user/signup">Sign Up</a>
+      <a href="/user/login">Login</a>
+    </nav>
+
+    <div id="parent-box">
+      
+    </div>
+  </body>
+  <script>
+      fetch("/blog/blogs")
+        .then((response) => response.json())
+        .then((jsonData) =>show(jsonData));
+
+    const show=(data)=>{
+        data.map((ele)=>{
+            let img=document.createElement("img")
+            img.src=ele.image
+            let title=document.createElement('p')
+            title.innerHTML=ele.title
+
+            let div=document.createElement("div")
+            div.setAttribute('class',"list")
+
+            div.addEventListener("click",(e)=>{
+              window.location.href=`/blog/singleBlog/${ele._id}`
+            })
+
+            div.append(img,title)
+    
+            document.getElementById("parent-box").append(div)
+        })
+    }
+  </script>
+</html>

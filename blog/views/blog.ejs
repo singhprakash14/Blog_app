@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            margin: 0 10px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        input[type="text"], input[type="url"] {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        input[type="submit"] {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="/blog">Blog</a>
+        <a href="/blog/create">Add Blog</a>
+        <a href="/user/signup">Sign Up</a>
+        <a href="/user/login">Login</a>
+    </nav>
+    <form action="/blog/create" method="post" id="blogForm">
+        <input type="text" placeholder="Enter Blog Title" name="title" id="title">
+        <input type="text" placeholder="Enter Blog Content" name="content" id="content">
+        <input type="text" placeholder="Enter Blog Category" name="category" id="category">
+        <input type="url" placeholder="Enter Blog Image" name="image" id="image">
+        <input type="submit" value="Blog">
+    </form>
+</body>
+</html>
